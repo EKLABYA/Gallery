@@ -1,0 +1,9 @@
+app.post('/checklogin',function(req,res){
+    var mp=req.body.email;
+    console.log(mp=="royeklabya@gmail.com");
+    console.log(req.body.password=="1234");
+    if((mp=="royeklabya@gmail.com") && req.body.password=="1234")
+        res.sendFile(path.join(__dirname+'/index.html'))
+    else
+    res.send("enter the correct login credential");
+  })

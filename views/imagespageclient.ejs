@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link
+	rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+	</script>
+	<script src=
+       "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+   </script>
+    <title>Image Uploading</title>
+</head>
+ 
+<body>
+    <h1 class="container-fluid d-flex justify-content-center">To Upload Image on mongoDB</h1>
+    <hr>
+    <div class="container-fluid d-flex justify-content-center">
+        <form action="/loginclientfinal" method="POST" enctype="multipart/form-data">
+            <h3 class="container-fluid d-flex justify-content-center">Upload an Client</h3>
+            <div>
+                <label for="name">Client Name</label>
+                <input type="text" id="name" placeholder="Name"
+                       value="" name="name" required>
+            </div>
+            <div >
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="email"
+                       value="" name="email" required>
+              </div>
+            
+            <div>
+                <label for="desc">Description about the Image</label>
+                <textarea id="desc" name="desc" value="" rows="2"
+                          placeholder="Description" required>
+                </textarea>
+            </div>
+           
+                <label for="image">Upload Image</label>
+                <input type="file" id="image"
+                       name="image" value="" required>
+            </div>
+            <div class="container-fluid d-flex justify-content-center" >
+                <button type="submit" >Submit</button>
+            </div>
+        </form>
+       
+    </div>
+ 
+    <hr>
+ 
+    
+    <div>
+
+        <h1 class="container-fluid d-flex justify-content-center">Uploaded Images</h1>
+        <% items.forEach(function(image) { %>
+        <div class="container-fluid d-flex justify-content-center">
+            <div >
+                <img src="data:image/<%=image.img.contentType%>;base64,
+                     <%=image.img.data.toString('base64')%>"  width="250px" height="250px">
+                <div>
+                    <h5><%= image.name %></h5>
+                     
+ 
+ 
+                     <p><%= image.desc %></p>
+ 
+ 
+ 
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</body>
+ 
+</html>

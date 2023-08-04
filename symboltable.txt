@@ -1,0 +1,18 @@
+
+
+Symbol Table
+
+id		 value		 type		  scope
+--------------------
+
+
+Symbol Table
+
+id		 value		 type		  scope
+--------------------
+
+
+Symbol Table
+
+id		 value		 type		  scope
+--------------------
