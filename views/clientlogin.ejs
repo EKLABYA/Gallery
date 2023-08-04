@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram-like Frontend</title>
+  <link rel="stylesheet" href="/path/to/your/styles.css"> <!-- Link to your custom styles -->
+</head>
+<body>
+  <header>
+    <!-- Instagram logo and navigation -->
+    <div class="logo">Instagram</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Main content, displaying posts -->
+    <div class="post-container">
+      <% for (let post of posts) { %>
+        <div class="post">
+          <img src="<%= post.imageUrl %>" alt="Post Image">
+          <div class="post-info">
+            <span class="username"><%= post.username %></span>
+            <span class="caption"><%= post.caption %></span>
+            <span class="likes"><%= post.likes %> likes</span>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </main>
+
+  <footer>
+    <!-- Footer content, links, etc. -->
+  </footer>
+
+</body>
+</html>
