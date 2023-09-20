@@ -1,4 +1,4 @@
-# Gallery 
+# OpenFly 
 Welcome to our dynamic photo sharing website! This platform allows users to upload and download their photos, creating a community to share their cherished memories. The website provides secure photo storage, and only the admin has the power to delete any photos to maintain the platform's integrity.
 
 # Features
